@@ -4,7 +4,7 @@ Extended utilities to integrate Prime UI library theming with Tailwind CSS and a
 
 ## Prime UI Library
 
-This plugin requires a Prime UI library with the next-gen theming;
+This plugin requires a Prime UI library with the next-gen theming, compatible with styled and unstyled modes.
 
 -   primevue v4+
 -   primeng v18+
@@ -136,6 +136,34 @@ PrimeFlex provide various animation utilities that are missing in Tailwind CSS c
 | ---------------- | ----------------------------- |
 | backface-visible | backface-visibility: visible; |
 | backface-hidden  | backface-visibility: hidden;  |
+
+### Animations 
+
+| Class                | Properties                |
+| -------------------- | --------------------------|
+| animate-fadein       | fadein 0.15s linear       |
+| animate-fadeout      | fadeout 0.15s linear      |
+| animate-slidedown    | slidedown 0.15s linear    |
+| animate-slideup      | slideup 0.15s linear      |
+| animate-scalein      | scalein 0.15s linear      |
+| animate-fadeinleft   | fadeinleft 0.15s linear   |
+| animate-fadeoutleft  | fadeoutleft 0.15s linear  |
+| animate-fadeinright  | fadeinright 0.15s linear  |
+| animate-fadeoutright | fadeoutright 0.15s linear |
+| animate-fadeinup     | fadeinup 0.15s linear     |
+| animate-fadeoutup    | fadeoutup 0.15s linear    |
+| animate-fadeindown   | fadeindown 0.15s linear   |
+| animate-fadeoutup    | fadeoutup 0.15s linear    |
+| animate-width        | width 0.15s linear        |
+| animate-flip         | flip 0.15s linear         |
+| animate-flipup       | flipup 0.15s linear       |
+| animate-flipleft     | flipleft 0.15s linear     |
+| animate-flipright    | flipright 0.15s linear    |
+| animate-zoomin       | zoomin 0.15s linear       |
+| animate-zoomindown   | zoomindown 0.15s linear   |
+| animate-zoominleft   | zoominleft 0.15s linear   |
+| animate-zoominright  | zoominright 0.15s linear  |
+| animate-zoominup     | zoominup 0.15s linear     |
 
 ## Variant modifiers and breakpoints
 
