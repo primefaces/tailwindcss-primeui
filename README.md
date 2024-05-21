@@ -1,21 +1,181 @@
-# Tailwind CSS Animated
+# Tailwind CSS Utilities for Prime UI Libraries
 
-Extended utilities for Tailwind CSS
+Extended utilities to integrate Prime UI library theming with Tailwind CSS and add the missing animation utilities from the legacy PrimeFlex.
+
+## Prime UI Library
+
+This plugin requires a Prime UI library with the next-gen theming;
+
+-   primevue v4+
+-   primeng v18+
+-   @primereact/core v1+
 
 ## Installation
 
-Install the plugin from npm:
+Install the plugin from npm.
 
 ```sh
 npm i tailwindcss-primeui
 ```
 
-Then add the plugin to your tailwind.config.js file:
+Add the plugin to your tailwind.config.js file.
 
 ```js
 // tailwind.config.js
 module.exports = {
     // ...
+    plugins: [require('tailwindcss-primeui')]
+};
+```
+
+## Colors
+
+Prime UI libraries utilize a color palette that consists of primary colors and surfaces, these colors can be used as Tailwind classes.
+
+```html
+<div class="bg-primary text-primary-contrast border-primary-500">Content</div>
+<div class="bg-surface-50 dark:bg-surface-900 text-surface-900 dark:text-surface-0 border-surface-200 dark:border-surface-700-contrast">Content</div>
+```
+
+| Class                   | Description                               |
+| ----------------------- | ----------------------------------------- |
+| bg-primary-[50-950]     | Primary background colors                 |
+| border-primary-[50-950] | Primary border colors                     |
+| text-primary-[50-950]   | Primary text colors                       |
+| bg-surface-[0-950]      | Surface background colors                 |
+| border-surface-[0-950]  | Surface border colors                     |
+| text-surface-[0-950]    | Surface text colors                       |
+| bg-primary              | Default primary background color          |
+| border-primary          | Default primary border color              |
+| text-primary            | Default primary text color                |
+| bg-primary-contrast     | Default primary contrast background color |
+| border-primary-contrast | Default primary contrast border color     |
+| text-primary-contrast   | Default primary contrast text color       |
+
+## Animations
+
+PrimeFlex provide various animation utilities that are missing in Tailwind CSS core, this plugin adds these plugins for migration.
+
+### Duration
+
+| Class                 | Properties                  |
+| --------------------- | --------------------------- |
+| animate-duration-0    | animation-duration: 0s;     |
+| animate-duration-75   | animation-duration: 75ms;   |
+| animate-duration-100  | animation-duration: 100ms;  |
+| animate-duration-150  | animation-duration: 150ms;  |
+| animate-duration-200  | animation-duration: 200ms;  |
+| animate-duration-300  | animation-duration: 300ms;  |
+| animate-duration-400  | animation-duration: 400ms;  |
+| animate-duration-500  | animation-duration: 500ms;  |
+| animate-duration-700  | animation-duration: 700ms;  |
+| animate-duration-1000 | animation-duration: 1000ms; |
+| animate-duration-2000 | animation-duration: 2000ms; |
+| animate-duration-3000 | animation-duration: 3000ms; |
+
+### Delay
+
+| Class              | Properties               |
+| ------------------ | ------------------------ |
+| animate-delay-none | animation-delay: 0ms;    |
+| animate-delay-75   | animation-delay: 75ms;   |
+| animate-delay-100  | animation-delay: 100ms;  |
+| animate-delay-150  | animation-delay: 150ms;  |
+| animate-delay-200  | animation-delay: 200ms;  |
+| animate-delay-300  | animation-delay: 300ms;  |
+| animate-delay-400  | animation-delay: 400ms;  |
+| animate-delay-500  | animation-delay: 500ms;  |
+| animate-delay-700  | animation-delay: 700ms;  |
+| animate-delay-1000 | animation-delay: 1000ms; |
+
+### Iteration Count
+
+| Class            | Properties                           |
+| ---------------- | ------------------------------------ |
+| animate-infinite | animation-iteration-count: infinite; |
+| animate-once     | animation-iteration-count: 1;        |
+| animate-twice    | animation-iteration-count: 2;        |
+
+### Direction
+
+| Class                     | Properties                              |
+| ------------------------- | --------------------------------------- |
+| animate-normal            | animation-direction: normal;            |
+| animate-reverse           | animation-direction: reverse;           |
+| animate-alternate         | animation-direction: alternate;         |
+| animate-alternate-reverse | animation-direction: alternate-reverse; |
+
+### Timing Function
+
+| Class               | Properties                                               |
+| ------------------- | -------------------------------------------------------- |
+| animate-ease-linear | animation-timing-function: linear;                       |
+| animate-ease-in     | animation-timing-function: cubic-bezier(0.4, 0, 1, 1);   |
+| animate-ease-out    | animation-timing-function: cubic-bezier(0, 0, 0.2, 1);   |
+| animate-ease-in-out | animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); |
+
+### Fill Mode
+
+| Class                  | Properties                      |
+| ---------------------- | ------------------------------- |
+| animate-fill-none      | animation-fill-mode: normal;    |
+| animate-fill-forwards  | animation-fill-mode: forwards;  |
+| animate-fill-backwards | animation-fill-mode: backwards; |
+| animate-fill-both      | animation-fill-mode: both;      |
+
+### Play State
+
+| Class           | Properties                     |
+| --------------- | ------------------------------ |
+| animate-running | animation-play-state: running; |
+| animate-paused  | animation-play-state: paused;  |
+
+### Backface Visibility
+
+| Class            | Properties                    |
+| ---------------- | ----------------------------- |
+| backface-visible | backface-visibility: visible; |
+| backface-hidden  | backface-visibility: hidden;  |
+
+## Variant modifiers and breakpoints
+
+All variants and breakpoints are supported.
+
+```html
+<div class="lg:hover:bg-primary lg:hover:animate-fadein motion-reduce:animate-none">
+    <!-- ... -->
+</div>
+```
+
+## Arbitrary values
+
+Any value within the square brackets allow defining one-off values that do not need to be defined as a reusable utility.
+
+```html
+<div class="animate-delay-[450ms] animate-duration-[4s]">
+    <!-- ... -->
+</div>
+```
+
+## Customizing the Plugin
+
+The default values can be customized using as a theme extension.
+
+```js
+// tailwind.config.js
+module.exports = {
+    theme: {
+        extend: {
+            animationDelay: {
+                475: '475ms',
+                2000: '2s'
+            },
+            animationDuration: {
+                4000: '4s',
+                slow: '10s'
+            }
+        }
+    },
     plugins: [require('tailwindcss-primeui')]
 };
 ```
