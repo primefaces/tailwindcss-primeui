@@ -1,0 +1,26 @@
+{
+    "name": "tailwindcss-primeui",
+    "description": "Utilities for Tailwind CSS",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/primefaces/primevue.git"
+    },
+    "license": "MIT",
+    "keywords": [
+        "tailwindcss",
+        "tailwind",
+        "plugin"
+    ],
+    "main": "src/index.js",
+    "scripts": {
+        "format": "prettier --write \"**/*.js\" --cache",
+        "format:check": "prettier --check \"**/*.js\""
+    },
+    "peerDependencies": {
+        "tailwindcss": ">=3.1.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.8",
+        "tailwindcss": "^3.1.0"
+    }
+}
