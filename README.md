@@ -30,39 +30,24 @@ module.exports = {
 
 ## Colors
 
-Prime UI libraries utilize a color palette that consists of primary colors and surfaces, these colors can be used as Tailwind classes.
+Prime UI libraries utilize a color palette that consists of primary colors and surfaces, these colors can be used as Tailwind extensions.
 
 ```html
 <div class="bg-primary text-primary-contrast border-primary-500">Content</div>
 <div class="bg-surface-50 dark:bg-surface-900 text-surface-900 dark:text-surface-0 border-surface-200 dark:border-surface-700">Content</div>
 ```
 
-| Class                    | Description                               |
-| ------------------------ | ----------------------------------------- |
-| bg-primary-[50-950]      | Primary background colors                 |
-| border-primary-[50-950]  | Primary border colors                     |
-| text-primary-[50-950]    | Primary text colors                       |
-| ring-primary-[50-950]    | Primary ring colors                       |
-| outline-primary-[50-950] | Primary outline colors                    |
-| fill-primary-[50-950]    | Primary svg fill colors                   |
-| bg-surface-[0-950]       | Surface background colors                 |
-| border-surface-[0-950]   | Surface border colors                     |
-| text-surface-[0-950]     | Surface text colors                       |
-| ring-surface-[0-950]     | Surface ring colors                       |
-| outline-surface-[0-950]  | Surface outline colors                    |
-| fill-surface-[0-950]     | Surface svg fill colors                   |
-| bg-primary               | Default primary background color          |
-| border-primary           | Default primary border color              |
-| text-primary             | Default primary text color                |
-| ring-primary             | Default primary ring color                |
-| outline-primary          | Default primary outline color             |
-| fill-primary             | Default primary svg fill color            |
-| bg-primary-contrast      | Default primary contrast background color |
-| border-primary-contrast  | Default primary contrast border color     |
-| text-primary-contrast    | Default primary contrast text color       |
-| ring-primary-contrast    | Default primary contrast ring color       |
-| outline-primary-contrast | Default primary contrast outline color    |
-| fill-primary-contrast    | Default primary contrast svg fill color   |
+| Color                       | Description                               |
+| --------------------------- | ----------------------------------------- |
+| primary-[50-950]            | Primary colors                            |
+| surface-[0-950]             | Surface colors                            |
+| primary                     | Default primary color                     |
+| primary-contrast            | Default primary contrast color            |
+| primary-emphasis            | Default primary emphasis color            |
+| highlight                   | Default highlight color                   |
+| highlight-emphasis          | Default highlight emphasis color          | 
+| highlight-contrast          | Default highlight contrast color          |
+| highlight-emphasis-contrast | Default highlight emphasis contrast color |
 
 ## Animations
 
