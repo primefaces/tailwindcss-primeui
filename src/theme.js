@@ -2,6 +2,7 @@ module.exports = {
     extend: {
         colors: {
             primary: 'var(--p-primary-color)',
+            'primary-emphasis': 'var(--p-primary-hover-color)',
             'primary-contrast': 'var(--p-primary-contrast-color)',
             'primary-50': 'var(--p-primary-50)',
             'primary-100': 'var(--p-primary-100)',
@@ -14,6 +15,10 @@ module.exports = {
             'primary-800': 'var(--p-primary-800)',
             'primary-900': 'var(--p-primary-900)',
             'primary-950': 'var(--p-primary-950)',
+            'highlight': 'var(--p-highlight-background)',
+            'highlight-emphasis': 'var(--p-highlight-focus-background)',
+            'highlight-contrast': 'var(--p-highlight-color)',
+            'highlight-emphasis-contrast': 'var(--p-highlight-focus-color)',
             'surface-0': 'var(--p-surface-0)',
             'surface-50': 'var(--p-surface-50)',
             'surface-100': 'var(--p-surface-100)',
