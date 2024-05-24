@@ -10,6 +10,7 @@ module.exports = plugin(
         require('./utils/iterationCount')(api);
         require('./utils/playState')(api);
         require('./utils/timingFunction')(api);
+        require('./utils/preset')(api);
     },
     {
         theme: require('./theme')

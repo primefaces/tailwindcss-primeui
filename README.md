@@ -37,17 +37,25 @@ Prime UI libraries utilize a color palette that consists of primary colors and s
 <div class="bg-surface-50 dark:bg-surface-900 text-surface-900 dark:text-surface-0 border-surface-200 dark:border-surface-700">Content</div>
 ```
 
-| Color                       | Description                               |
-| --------------------------- | ----------------------------------------- |
-| primary-[50-950]            | Primary colors                            |
-| surface-[0-950]             | Surface colors                            |
-| primary                     | Default primary color                     |
-| primary-contrast            | Default primary contrast color            |
-| primary-emphasis            | Default primary emphasis color            |
-| highlight                   | Default highlight color                   |
-| highlight-emphasis          | Default highlight emphasis color          | 
-| highlight-contrast          | Default highlight contrast color          |
-| highlight-emphasis-contrast | Default highlight emphasis contrast color |
+| Color            | Description                    |
+| ---------------- | ------------------------------ |
+| primary-[50-950] | Primary colors                 |
+| surface-[0-950]  | Surface colors                 |
+| primary          | Default primary color          |
+| primary-contrast | Default primary contrast color |
+| primary-emphasis | Default primary emphasis color |
+
+Special preset classes defined by the Prime UI library theme preset such as Aura, Lara, or Nora.
+
+| border-surface | Border color |
+| bg-emphasis | Emphasis background, e.g. hovered element |
+| bg-highlight | Highlight background |
+| bg-highlight-emphasis | Highlight background with emphasis |
+| rounded-border | Border radius |
+| text-color | Text color |
+| text-color-emphasşis | Text color with emphasis |
+| text-muted-color | Secondary text color |
+| text-muted-color-emphasis | Secondary text color with emphasis |
 
 ## Animations
 
