@@ -55,7 +55,7 @@ Special preset classes defined by the Prime UI library theme preset such as Aura
 | bg-highlight-emphasis | Highlight background with emphasis |
 | rounded-border | Border radius |
 | text-color | Text color |
-| text-color-emphasşis | Text color with emphasis |
+| text-color-emphasis | Text color with emphasis |
 | text-muted-color | Secondary text color |
 | text-muted-color-emphasis | Secondary text color with emphasis |
 
