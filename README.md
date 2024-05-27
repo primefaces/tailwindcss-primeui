@@ -47,6 +47,8 @@ Prime UI libraries utilize a color palette that consists of primary colors and s
 
 Special preset classes defined by the Prime UI library theme preset such as Aura, Lara, or Nora.
 
+| Color            | Description                    |
+| ---------------- | ------------------------------ |
 | border-surface | Border color |
 | bg-emphasis | Emphasis background, e.g. hovered element |
 | bg-highlight | Highlight background |
