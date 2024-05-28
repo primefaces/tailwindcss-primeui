@@ -47,17 +47,17 @@ Prime UI libraries utilize a color palette that consists of primary colors and s
 
 Special preset classes defined by the Prime UI library theme preset such as Aura, Lara, or Nora.
 
-| Color            | Description                    |
-| ---------------- | ------------------------------ |
-| border-surface | Border color |
-| bg-emphasis | Emphasis background, e.g. hovered element |
-| bg-highlight | Highlight background |
-| bg-highlight-emphasis | Highlight background with emphasis |
-| rounded-border | Border radius |
-| text-color | Text color |
-| text-color-emphasis | Text color with emphasis |
-| text-muted-color | Secondary text color |
-| text-muted-color-emphasis | Secondary text color with emphasis |
+| Color                     | Description                               |
+| ------------------------- | ----------------------------------------- |
+| border-surface            | Border color                              |
+| bg-emphasis               | Emphasis background, e.g. hovered element |
+| bg-highlight              | Highlight background                      |
+| bg-highlight-emphasis     | Highlight background with emphasis        |
+| rounded-border            | Border radius                             |
+| text-color                | Text color                                |
+| text-color-emphasis       | Text color with emphasis                  |
+| text-muted-color          | Secondary text color                      |
+| text-muted-color-emphasis | Secondary text color with emphasis        |
 
 ## Animations
 
@@ -146,31 +146,31 @@ PrimeFlex provide various animation utilities that are missing in Tailwind CSS c
 
 ### Animations
 
-| Class                | Properties                |
-| -------------------- | ------------------------- |
-| animate-fadein       | fadein 0.15s linear       |
-| animate-fadeout      | fadeout 0.15s linear      |
-| animate-slidedown    | slidedown 0.15s linear    |
-| animate-slideup      | slideup 0.15s linear      |
-| animate-scalein      | scalein 0.15s linear      |
-| animate-fadeinleft   | fadeinleft 0.15s linear   |
-| animate-fadeoutleft  | fadeoutleft 0.15s linear  |
-| animate-fadeinright  | fadeinright 0.15s linear  |
-| animate-fadeoutright | fadeoutright 0.15s linear |
-| animate-fadeinup     | fadeinup 0.15s linear     |
-| animate-fadeoutup    | fadeoutup 0.15s linear    |
-| animate-fadeindown   | fadeindown 0.15s linear   |
-| animate-fadeoutup    | fadeoutup 0.15s linear    |
-| animate-width        | width 0.15s linear        |
-| animate-flip         | flip 0.15s linear         |
-| animate-flipup       | flipup 0.15s linear       |
-| animate-flipleft     | flipleft 0.15s linear     |
-| animate-flipright    | flipright 0.15s linear    |
-| animate-zoomin       | zoomin 0.15s linear       |
-| animate-zoomindown   | zoomindown 0.15s linear   |
-| animate-zoominleft   | zoominleft 0.15s linear   |
-| animate-zoominright  | zoominright 0.15s linear  |
-| animate-zoominup     | zoominup 0.15s linear     |
+| Class                | Properties                             |
+| -------------------- | -------------------------------------- |
+| animate-fadein       | fadein 0.15s linear                    |
+| animate-fadeout      | fadeout 0.15s linear                   |
+| animate-slidedown    | slidedown 0.45s ease-in-out            |
+| animate-slideup      | slideup 0.45s cubic-bezier(0, 1, 0, 1) |
+| animate-scalein      | scalein 0.15s linear                   |
+| animate-fadeinleft   | fadeinleft 0.15s linear                |
+| animate-fadeoutleft  | fadeoutleft 0.15s linear               |
+| animate-fadeinright  | fadeinright 0.15s linear               |
+| animate-fadeoutright | fadeoutright 0.15s linear              |
+| animate-fadeinup     | fadeinup 0.15s linear                  |
+| animate-fadeoutup    | fadeoutup 0.15s linear                 |
+| animate-fadeindown   | fadeindown 0.15s linear                |
+| animate-fadeoutup    | fadeoutup 0.15s linear                 |
+| animate-width        | width 0.15s linear                     |
+| animate-flip         | flip 0.15s linear                      |
+| animate-flipup       | flipup 0.15s linear                    |
+| animate-flipleft     | flipleft 0.15s linear                  |
+| animate-flipright    | flipright 0.15s linear                 |
+| animate-zoomin       | zoomin 0.15s linear                    |
+| animate-zoomindown   | zoomindown 0.15s linear                |
+| animate-zoominleft   | zoominleft 0.15s linear                |
+| animate-zoominright  | zoominright 0.15s linear               |
+| animate-zoominup     | zoominup 0.15s linear                  |
 
 ## Variant modifiers and breakpoints
 
