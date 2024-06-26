@@ -1,5 +1,5 @@
 const convert = (color) => {
-    return `color-mix(in srgb, ${color}, transparent calc(100% - 100% * <alpha-value>))`;
+    return `color-mix(in srgb, ${color} calc(100% * <alpha-value>), transparent)`;
 };
 
 module.exports = {
