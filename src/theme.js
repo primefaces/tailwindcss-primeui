@@ -215,7 +215,7 @@ module.exports = {
                     transform: 'scale3d(0.3, 0.3, 0.3)',
                     opacity: '0'
                 },
-                50: {
+                '50%': {
                     opacity: '1'
                 }
             },
@@ -224,7 +224,7 @@ module.exports = {
                     transform: 'scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)',
                     opacity: '0'
                 },
-                60: {
+                '60%': {
                     transform: 'scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)',
                     opacity: '1'
                 }
@@ -234,7 +234,7 @@ module.exports = {
                     transform: 'scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)',
                     opacity: '0'
                 },
-                60: {
+                '60%': {
                     transform: 'scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)',
                     opacity: '1'
                 }
@@ -244,7 +244,7 @@ module.exports = {
                     transform: 'scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)',
                     opacity: '0'
                 },
-                60: {
+                '60%': {
                     transform: 'scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)',
                     opacity: '1'
                 }
@@ -254,7 +254,7 @@ module.exports = {
                     transform: 'scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)',
                     opacity: '0'
                 },
-                60: {
+                '60%': {
                     transform: 'scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)',
                     opacity: '1'
                 }
