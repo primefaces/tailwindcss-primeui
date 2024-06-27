@@ -4,7 +4,7 @@
     "description": "Utilities for Tailwind CSS",
     "repository": {
         "type": "git",
-        "url": "https://github.com/primefaces/primevue.git"
+        "url": "https://github.com/primefaces/tailwindcss-primevue.git"
     },
     "license": "MIT",
     "keywords": [
