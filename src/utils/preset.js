@@ -5,7 +5,7 @@ module.exports = ({ addUtilities }) =>
         },
         '.bg-emphasis': {
             background: 'var(--p-content-hover-background)',
-            color: 'var(---p-content-hover-color)'
+            color: 'var(--p-content-hover-color)'
         },
         '.bg-highlight': {
             background: 'var(--p-highlight-background)',
