@@ -22,12 +22,12 @@ module.exports = ({ addUtilities }) =>
             color: 'var(--p-text-color)'
         },
         '.text-color-emphasis': {
-            color: 'var(--p-text-color)'
+            color: 'var(--p-text-hover-color)'
         },
         '.text-muted-color': {
             color: 'var(--p-text-muted-color)'
         },
         '.text-muted-color-emphasis': {
-            color: 'var(--p-text-muted-color)'
+            color: 'var(--p-text-hover-muted-color)'
         }
     });
