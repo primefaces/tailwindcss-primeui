@@ -7,6 +7,7 @@ module.exports = {
         colors: {
             primary: convert('var(--p-primary-color)'),
             'primary-emphasis': convert('var(--p-primary-hover-color)'),
+            'primary-emphasis-alt': convert('var(--p-primary-active-color)'),
             'primary-contrast': convert('var(--p-primary-contrast-color)'),
             'primary-50': convert('var(--p-primary-50)'),
             'primary-100': convert('var(--p-primary-100)'),
