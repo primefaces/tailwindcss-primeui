@@ -1,6 +1,6 @@
 import type { PluginAPI, PluginCreator } from 'tailwindcss/types/config';
 
-export default (({ addUtilities }: PluginAPI) =>
+const iterationCount: PluginCreator = ({ addUtilities }: PluginAPI) =>
     addUtilities({
         '.animate-infinite': {
             'animation-iteration-count': 'infinite'
@@ -11,4 +11,5 @@ export default (({ addUtilities }: PluginAPI) =>
         '.animate-twice': {
             'animation-iteration-count': '2'
         }
-    })) satisfies PluginCreator;
+    });
+export default iterationCount;

@@ -1,3 +1,5 @@
+import type { PluginCreator } from 'tailwindcss/types/config';
+
 import backface from './backface';
 import delay from './delay';
 import direction from './direction';
@@ -8,7 +10,7 @@ import playState from './playState';
 import preset from './preset';
 import timingFunction from './timingFunction';
 
-const utils = {
+const utils: { [key: string]: PluginCreator } = {
     backface,
     delay,
     direction,
@@ -19,5 +21,4 @@ const utils = {
     preset,
     timingFunction
 };
-
 export default utils;

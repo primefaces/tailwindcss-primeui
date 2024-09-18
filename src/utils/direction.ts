@@ -1,6 +1,6 @@
 import type { PluginAPI, PluginCreator } from 'tailwindcss/types/config';
 
-export default (({ addUtilities }: PluginAPI) =>
+const direction: PluginCreator = ({ addUtilities }: PluginAPI) =>
     addUtilities({
         '.animate-normal': {
             'animation-direction': 'normal'
@@ -14,4 +14,5 @@ export default (({ addUtilities }: PluginAPI) =>
         '.animate-alternate-reverse': {
             'animation-direction': 'alternate-reverse'
         }
-    })) satisfies PluginCreator;
+    });
+export default direction;

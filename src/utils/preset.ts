@@ -1,6 +1,6 @@
 import type { PluginAPI, PluginCreator } from 'tailwindcss/types/config';
 
-export default (({ addUtilities }: PluginAPI) =>
+const preset: PluginCreator = ({ addUtilities }: PluginAPI) =>
     addUtilities({
         '.border-surface': {
             'border-color': 'var(--p-content-border-color)'
@@ -32,4 +32,5 @@ export default (({ addUtilities }: PluginAPI) =>
         '.text-muted-color-emphasis': {
             color: 'var(--p-text-hover-muted-color)'
         }
-    })) satisfies PluginCreator;
+    });
+export default preset;

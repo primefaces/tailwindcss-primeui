@@ -1,6 +1,6 @@
 import type { PluginAPI, PluginCreator } from 'tailwindcss/types/config';
 
-export default (({ addUtilities }: PluginAPI) =>
+const fillMode: PluginCreator = ({ addUtilities }: PluginAPI) =>
     addUtilities({
         '.animate-fill-none': {
             'animation-fill-mode': 'none'
@@ -14,4 +14,5 @@ export default (({ addUtilities }: PluginAPI) =>
         '.animate-fill-both': {
             'animation-fill-mode': 'both'
         }
-    })) satisfies PluginCreator;
+    });
+export default fillMode;

@@ -1,6 +1,6 @@
 import type { PluginAPI, PluginCreator } from 'tailwindcss/types/config';
 
-export default (({ matchUtilities, theme }: PluginAPI) =>
+const delay: PluginCreator = ({ matchUtilities, theme }: PluginAPI) =>
     matchUtilities(
         {
             'animate-delay': (value) => ({
@@ -10,4 +10,5 @@ export default (({ matchUtilities, theme }: PluginAPI) =>
         {
             values: theme('animationDelay')
         }
-    )) satisfies PluginCreator;
+    );
+export default delay;

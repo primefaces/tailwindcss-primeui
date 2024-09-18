@@ -4,7 +4,7 @@ function convert(color: string): string {
     return `color-mix(in srgb, ${color} calc(100% * <alpha-value>), transparent)`;
 }
 
-export default {
+const theme: Config['theme'] = {
     extend: {
         colors: {
             primary: convert('var(--p-primary-color)'),
@@ -315,4 +315,5 @@ export default {
             3000: '3000ms'
         }
     }
-} satisfies Config['theme'];
+};
+export default theme;

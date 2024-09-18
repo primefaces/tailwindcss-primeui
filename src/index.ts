@@ -9,7 +9,7 @@ import utils from './utils';
  */
 type PluginConfig = PluginsConfig[number];
 
-export default plugin(
+const config: PluginConfig = plugin(
     (api) => {
         utils.backface(api);
         utils.delay(api);
@@ -22,4 +22,5 @@ export default plugin(
         utils.preset(api);
     },
     { theme }
-) satisfies PluginConfig;
+);
+export default config;

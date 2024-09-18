@@ -1,6 +1,6 @@
 import type { PluginAPI, PluginCreator } from 'tailwindcss/types/config';
 
-export default (({ addUtilities }: PluginAPI) =>
+const backface: PluginCreator = ({ addUtilities }: PluginAPI) =>
     addUtilities({
         '.backface-visible': {
             'backface-visibility': 'visible'
@@ -8,4 +8,5 @@ export default (({ addUtilities }: PluginAPI) =>
         '.backface-hidden': {
             'backface-visibility': 'hidden'
         }
-    })) satisfies PluginCreator;
+    });
+export default backface;
