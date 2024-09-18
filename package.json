@@ -12,19 +12,30 @@
         "tailwind",
         "plugin"
     ],
-    "main": "src/index.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "files": [
-        "/src"
+        "/dist"
     ],
     "scripts": {
-        "format": "prettier --write \"**/*.js\" --cache",
-        "format:check": "prettier --check \"**/*.js\""
+        "build": "tsc",
+        "format": "prettier --write \"**/*.{js,ts}\" --cache && eslint --cache --fix \"**/*.{js,ts}\"",
+        "format:check": "prettier --check \"**/*.{js,ts}\" && eslint \"**/*.{js,ts}\""
     },
     "peerDependencies": {
         "tailwindcss": ">=3.1.0"
     },
     "devDependencies": {
-        "prettier": "^2.8.8",
-        "tailwindcss": "^3.1.0"
+        "@types/node": "^22.5.5",
+        "@typescript-eslint/eslint-plugin": "^8.6.0",
+        "@typescript-eslint/parser": "^8.6.0",
+        "eslint": "^9.10.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.3.3",
+        "tailwindcss": "^3.1.0",
+        "ts-node": "^10.9.2",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.6.0"
     }
 }

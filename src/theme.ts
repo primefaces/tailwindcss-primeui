@@ -1,8 +1,10 @@
-const convert = (color) => {
-    return `color-mix(in srgb, ${color} calc(100% * <alpha-value>), transparent)`;
-};
+import type { Config } from 'tailwindcss';
 
-module.exports = {
+function convert(color: string): string {
+    return `color-mix(in srgb, ${color} calc(100% * <alpha-value>), transparent)`;
+}
+
+export default {
     extend: {
         colors: {
             primary: convert('var(--p-primary-color)'),
@@ -313,4 +315,4 @@ module.exports = {
             3000: '3000ms'
         }
     }
-};
+} satisfies Config['theme'];
