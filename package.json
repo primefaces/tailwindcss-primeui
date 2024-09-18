@@ -20,7 +20,8 @@
     "scripts": {
         "build": "tsc",
         "format": "prettier --write \"**/*.{js,ts}\" --cache && eslint --cache --fix \"**/*.{js,ts}\"",
-        "format:check": "prettier --check \"**/*.{js,ts}\" && eslint \"**/*.{js,ts}\""
+        "format:check": "prettier --check \"**/*.{js,ts}\" && eslint \"**/*.{js,ts}\"",
+        "prepublishOnly": "npm run format:check && npm run build"
     },
     "peerDependencies": {
         "tailwindcss": ">=3.1.0"
