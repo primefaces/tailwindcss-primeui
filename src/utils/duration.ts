@@ -1,4 +1,6 @@
-module.exports = ({ matchUtilities, theme }) =>
+import type { PluginAPI, PluginCreator } from 'tailwindcss/types/config';
+
+const duration: PluginCreator = ({ matchUtilities, theme }: PluginAPI) =>
     matchUtilities(
         {
             'animate-duration': (value) => ({
@@ -9,3 +11,4 @@ module.exports = ({ matchUtilities, theme }) =>
             values: theme('animationDuration')
         }
     );
+export default duration;

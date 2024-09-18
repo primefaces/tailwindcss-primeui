@@ -1,4 +1,6 @@
-module.exports = ({ addUtilities }) =>
+import type { PluginAPI, PluginCreator } from 'tailwindcss/types/config';
+
+const playState: PluginCreator = ({ addUtilities }: PluginAPI) =>
     addUtilities({
         '.animate-running': {
             'animation-play-state': 'running'
@@ -7,3 +9,4 @@ module.exports = ({ addUtilities }) =>
             'animation-play-state': 'paused'
         }
     });
+export default playState;
