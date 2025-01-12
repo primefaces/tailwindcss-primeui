@@ -34,6 +34,18 @@ module.exports = {
             'surface-950': convert('var(--p-surface-950)')
         },
         keyframes: {
+            enter: {
+                from: {
+                    opacity: 'var(--p-enter-opacity, 1)',
+                    transform: 'translate3d(var(--p-enter-translate-x, 0), var(--p-enter-translate-y, 0), 0) scale3d(var(--p-enter-scale, 1), var(--p-enter-scale, 1), var(--p-enter-scale, 1)) rotate(var(--p-enter-rotate, 0))'
+                }
+            },
+            leave: {
+                to: {
+                    opacity: 'var(--p-leave-opacity, 1)',
+                    transform: 'translate3d(var(--p-leave-translate-x, 0), var(--p-leave-translate-y, 0), 0) scale3d(var(--p-leave-scale, 1), var(--p-leave-scale, 1), var(--p-leave-scale, 1)) rotate(var(--p-leave-rotate, 0))'
+                }
+            },
             fadein: {
                 '0%': {
                     opacity: '0'
@@ -311,6 +323,10 @@ module.exports = {
             1000: '1000ms',
             2000: '2000ms',
             3000: '3000ms'
-        }
+        },
+        animationOpacity: ({ theme }) => theme('opacity'),
+        animationTranslate: ({ theme }) => theme('translate'),
+        animationScale: ({ theme }) => theme('scale'),
+        animationRotate: ({ theme }) => theme('rotate')
     }
 };

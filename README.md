@@ -172,6 +172,45 @@ PrimeFlex provide various animation utilities that are missing in Tailwind CSS c
 | animate-zoominright  | zoominright 0.15s linear               |
 | animate-zoominup     | zoominup 0.15s linear                  |
 
+### Enter and Leave
+
+| animate-enter | |
+| animate-leave | |
+
+## Fade In and Out
+
+Values are derived from the Tailwind CSS opacity e.g. **fade-in-50** and **fade-out-20**. Arbitrary values such as **fade-in-[15]** are also supported.
+
+| fade-in-{value} | --p-enter-opacity: {value} |
+| fade-out-{value} | --p-leave-opacity: {value} |
+
+## Zoom In and Out
+
+Values are derived from the Tailwind CSS scale e.g. **zoom-in-50** and **zoom-out-75**. Arbitrary values such as **zoom-in-[0.8]** are also supported.
+
+| zoom-in-{value} | --p-enter-scale: {value} |
+| zoom-out-{value} | --p-leave-scale: {value} |
+
+## Spin In and Out
+
+Values are derived from the Tailwind CSS rotate e.g. **spin-in-45** and **spin-out-90**. Arbitrary values such as **spin-in-[60deg]** are also supported.
+
+| spin-in-{value} | --p-enter-rotate: {value} |
+| spin-out-{value} | --p-leave-rotate: {value} |
+
+## Slide In and Out
+
+Values are derived from the Tailwind CSS translate e.g. **slide-in-from-t-50** and **slide-out-to-l-8**. Arbitrary values such as **slide-in-from-b-[8px]** are also supported.
+
+| slide-in-from-t-{value} | --p-enter-translate-y: -{value} |
+| slide-in-from-t-{value} | --p-enter-translate-y: {value} |
+| slide-in-from-t-{value} | --p-enter-translate-x: -{value} |
+| slide-in-from-t-{value} | --p-enter-translate-x: {value} |
+| slide-out-to-t-{value} | --p-leave-translate-y: -{value} |
+| slide-out-to-t-{value} | --p-leave-translate-y: {value} |
+| slide-out-to-t-{value} | --p-leave-translate-x: -{value} |
+| slide-out-to-t-{value} | --p-leave-translate-x: {value} |
+
 ## Variant modifiers and breakpoints
 
 All variants and breakpoints are supported.

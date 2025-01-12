@@ -11,6 +11,7 @@ module.exports = plugin(
         require('./utils/playState')(api);
         require('./utils/timingFunction')(api);
         require('./utils/preset')(api);
+        require('./utils/enterleave')(api);
     },
     {
         theme: require('./theme')
