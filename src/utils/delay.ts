@@ -1,7 +1,9 @@
-module.exports = ({ matchUtilities, theme }) =>
+import { PluginAPI } from 'tailwindcss/types/config';
+
+export = ({ matchUtilities, theme }: PluginAPI): void => {
     matchUtilities(
         {
-            'animate-delay': (value) => ({
+            'animate-delay': (value: string) => ({
                 'animation-delay': value
             })
         },
@@ -9,3 +11,4 @@ module.exports = ({ matchUtilities, theme }) =>
             values: theme('animationDelay')
         }
     );
+};

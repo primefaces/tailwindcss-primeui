@@ -1,4 +1,6 @@
-module.exports = ({ addUtilities, matchUtilities, theme }) => {
+import { PluginAPI } from 'tailwindcss/types/config';
+
+export = ({ addUtilities, matchUtilities, theme }: PluginAPI): void => {
     addUtilities({
         '@keyframes enter': theme('keyframes.enter'),
         '@keyframes leave': theme('keyframes.leave'),
@@ -22,52 +24,52 @@ module.exports = ({ addUtilities, matchUtilities, theme }) => {
 
     matchUtilities(
         {
-            'fade-in': (value) => ({ '--p-enter-opacity': value }),
-            'fade-out': (value) => ({ '--p-leave-opacity': value })
+            'fade-in': (value: string) => ({ '--p-enter-opacity': value }),
+            'fade-out': (value: string) => ({ '--p-leave-opacity': value })
         },
         { values: theme('animationOpacity') }
     );
 
     matchUtilities(
         {
-            'zoom-in': (value) => ({ '--p-enter-scale': value }),
-            'zoom-out': (value) => ({ '--p-leave-scale': value })
+            'zoom-in': (value: string) => ({ '--p-enter-scale': value }),
+            'zoom-out': (value: string) => ({ '--p-leave-scale': value })
         },
         { values: theme('animationScale') }
     );
 
     matchUtilities(
         {
-            'spin-in': (value) => ({ '--p-enter-rotate': value }),
-            'spin-out': (value) => ({ '--p-leave-rotate': value })
+            'spin-in': (value: string) => ({ '--p-enter-rotate': value }),
+            'spin-out': (value: string) => ({ '--p-leave-rotate': value })
         },
         { values: theme('animationRotate') }
     );
 
     matchUtilities(
         {
-            'slide-in-from-t': (value) => ({
+            'slide-in-from-t': (value: string) => ({
                 '--p-enter-translate-y': `-${value}`
             }),
-            'slide-in-from-b': (value) => ({
+            'slide-in-from-b': (value: string) => ({
                 '--p-enter-translate-y': value
             }),
-            'slide-in-from-l': (value) => ({
+            'slide-in-from-l': (value: string) => ({
                 '--p-enter-translate-x': `-${value}`
             }),
-            'slide-in-from-r': (value) => ({
+            'slide-in-from-r': (value: string) => ({
                 '--p-enter-translate-x': value
             }),
-            'slide-out-from-t': (value) => ({
+            'slide-out-from-t': (value: string) => ({
                 '--p-leave-translate-y': `-${value}`
             }),
-            'slide-out-from-b': (value) => ({
+            'slide-out-from-b': (value: string) => ({
                 '--p-leave-translate-y': value
             }),
-            'slide-out-from-l': (value) => ({
+            'slide-out-from-l': (value: string) => ({
                 '--p-leave-translate-x': `-${value}`
             }),
-            'slide-out-from-r': (value) => ({
+            'slide-out-from-r': (value: string) => ({
                 '--p-leave-translate-x': value
             })
         },

@@ -1,4 +1,6 @@
-module.exports = ({ addUtilities }) =>
+import { PluginAPI } from 'tailwindcss/types/config';
+
+export = ({ addUtilities }: PluginAPI): void => {
     addUtilities({
         '.animate-fill-none': {
             'animation-fill-mode': 'none'
@@ -13,3 +15,4 @@ module.exports = ({ addUtilities }) =>
             'animation-fill-mode': 'both'
         }
     });
+};

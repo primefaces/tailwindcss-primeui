@@ -1,4 +1,6 @@
-module.exports = ({ addUtilities }) =>
+import { PluginAPI } from 'tailwindcss/types/config';
+
+export = ({ addUtilities }: PluginAPI): void => {
     addUtilities({
         '.animate-ease-linear': {
             'animation-timing-function': 'linear'
@@ -13,3 +15,4 @@ module.exports = ({ addUtilities }) =>
             'animation-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)'
         }
     });
+};

@@ -12,19 +12,26 @@
         "tailwind",
         "plugin"
     ],
-    "main": "src/index.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "files": [
-        "/src"
+        "/dist"
     ],
     "scripts": {
-        "format": "prettier --write \"**/*.js\" --cache",
-        "format:check": "prettier --check \"**/*.js\""
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "format": "prettier --write \"**/*.{js,ts}\" --cache",
+        "format:check": "prettier --check \"**/*.{js,ts}\"",
+        "prepublishOnly": "npm run build"
     },
     "peerDependencies": {
         "tailwindcss": ">=3.1.0"
     },
     "devDependencies": {
+        "@types/node": "^20.11.19",
+        "@types/tailwindcss": "^3.1.0",
         "prettier": "^2.8.8",
-        "tailwindcss": "^3.1.0"
+        "tailwindcss": "^3.1.0",
+        "typescript": "^5.3.3"
     }
 }

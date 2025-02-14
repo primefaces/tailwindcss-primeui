@@ -1,4 +1,6 @@
-module.exports = ({ addUtilities }) =>
+import { PluginAPI } from 'tailwindcss/types/config';
+
+export = ({ addUtilities }: PluginAPI): void => {
     addUtilities({
         '.animate-infinite': {
             'animation-iteration-count': 'infinite'
@@ -10,3 +12,4 @@ module.exports = ({ addUtilities }) =>
             'animation-iteration-count': '2'
         }
     });
+};
