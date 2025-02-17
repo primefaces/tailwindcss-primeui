@@ -1,4 +1,6 @@
-module.exports = ({ addUtilities }) =>
+import { PluginAPI } from 'tailwindcss/types/config';
+
+export = ({ addUtilities }: PluginAPI): void => {
     addUtilities({
         '.backface-visible': {
             'backface-visibility': 'visible'
@@ -7,3 +9,4 @@ module.exports = ({ addUtilities }) =>
             'backface-visibility': 'hidden'
         }
     });
+};

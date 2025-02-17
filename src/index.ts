@@ -1,7 +1,8 @@
-const plugin = require('tailwindcss/plugin');
+import { PluginAPI } from 'tailwindcss/types/config';
+import plugin from 'tailwindcss/plugin';
 
-module.exports = plugin(
-    (api) => {
+export = plugin(
+    (api: PluginAPI) => {
         require('./utils/backface')(api);
         require('./utils/delay')(api);
         require('./utils/direction')(api);

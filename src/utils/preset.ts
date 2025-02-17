@@ -1,4 +1,6 @@
-module.exports = ({ addUtilities }) =>
+import { PluginAPI } from 'tailwindcss/types/config';
+
+export = ({ addUtilities }: PluginAPI): void => {
     addUtilities({
         '.border-surface': {
             'border-color': 'var(--p-content-border-color)'
@@ -31,3 +33,4 @@ module.exports = ({ addUtilities }) =>
             color: 'var(--p-text-hover-muted-color)'
         }
     });
+};
