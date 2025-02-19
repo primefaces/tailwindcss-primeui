@@ -1,37 +1,60 @@
 {
-    "name": "tailwindcss-primeui",
-    "version": "0.4.0",
-    "description": "Utilities for Tailwind CSS",
+    "name": "@tailwindcss-primeui/monorepo",
+    "version": "0.0.0",
+    "author": "PrimeTek Informatics",
     "repository": {
         "type": "git",
-        "url": "https://github.com/primefaces/tailwindcss-primeui.git"
+        "url": "git+https://github.com/primefaces/tailwindcss-primeui.git"
     },
     "license": "MIT",
-    "keywords": [
-        "tailwindcss",
-        "tailwind",
-        "plugin"
-    ],
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "files": [
-        "/dist"
-    ],
-    "scripts": {
-        "build": "tsc",
-        "watch": "tsc --watch",
-        "format": "prettier --write \"**/*.{js,ts}\" --cache",
-        "format:check": "prettier --check \"**/*.{js,ts}\"",
-        "prepublishOnly": "npm run build"
+    "bugs": {
+        "url": "https://github.com/primefaces/tailwindcss-primeui/issues"
     },
-    "peerDependencies": {
-        "tailwindcss": ">=3.1.0"
+    "scripts": {
+        "setup": "npx rimraf --glob **/node_modules **/dist ./pnpm-lock.yaml && pnpm run init",
+        "init": "pnpm install && husky",
+        "link": "pnpm --filter './packages/*' dev:link",
+        "release": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary",
+        "release:beta": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary --tag beta",
+        "release:rc": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary --tag rc",
+        "build": "cross-env NODE_ENV=production pnpm run build:check && pnpm run build:packages",
+        "build:check": "pnpm run format:check && pnpm run lint && pnpm run security:check",
+        "build:packages": "pnpm run build:lib",
+        "build:lib": "pnpm --filter tailwindcss-primeui build",
+        "tw3:dev": "pnpm --filter tailwindcss-v3 dev",
+        "tw4:dev": "pnpm --filter tailwindcss-v4 dev",
+        "typecheck": "pnpm --filter './packages/*' typecheck",
+        "security:check": "pnpm audit --production --audit-level high",
+        "format": "prettier --write \"**/*.{js,mjs,ts,mts,d.ts}\"",
+        "format:check": "prettier --check \"**/*.{js,mjs,ts,mts,d.ts}\" ",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix"
     },
     "devDependencies": {
-        "@types/node": "^20.11.19",
-        "@types/tailwindcss": "^3.1.0",
-        "prettier": "^2.8.8",
-        "tailwindcss": "^3.1.0",
-        "typescript": "^5.3.3"
+        "@commitlint/cli": "^19.6.1",
+        "@commitlint/config-conventional": "^19.6.0",
+        "cross-env": "^7.0.3",
+        "eslint": "^9.19.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-jest": "^28.11.0",
+        "fs-extra": "^11.2.0",
+        "glob": "^10.4.2",
+        "husky": "^9.1.6",
+        "lint-staged": "^12.0.0",
+        "pnpm": "^9.6.0",
+        "prettier": "^3.5.1",
+        "rimraf": "^6.0.1",
+        "tailwindcss": "catalog:tw3",
+        "tsup": "^8.3.6",
+        "typedoc": "0.27.6",
+        "typescript": "^5.7.3",
+        "typescript-eslint": "^8.24.1"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "pnpm@9.6.0",
+    "lint-staged": {
+        "**/*.{js,mjs,ts,mts,d.ts}": ["prettier --write"]
     }
 }

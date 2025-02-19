@@ -1,0 +1,61 @@
+{
+    "name": "tailwindcss-primeui",
+    "version": "0.5.0",
+    "author": "PrimeTek Informatics",
+    "description": "Utilities for Tailwind CSS",
+    "license": "MIT",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/primefaces/tailwindcss-primeui.git",
+        "directory": "packages/tailwindcss-primeui"
+    },
+    "bugs": {
+        "url": "https://github.com/primefaces/tailwindcss-primeui/issues"
+    },
+    "keywords": [
+        "tailwindcss",
+        "tailwind",
+        "plugin"
+    ],
+    "main": "./src/js/index.ts",
+    "module": "./src/js/index.ts",
+    "style": "./src/css/index.css",
+    "types": "./src/js/index.ts",
+    "exports": {
+        ".": {
+            "types": "./src/js/index.ts",
+            "style": "./src/css/index.css",
+            "import": "./src/js/index.ts",
+            "require": "./src/js/index.ts"
+        }
+    },
+    "publishConfig": {
+        "main": "./js/index.js",
+        "module": "./js/index.js",
+        "unpkg": "./js/index.global.js",
+        "style": "./css/index.css",
+        "types": "./js/index.d.ts",
+        "exports": {
+            ".": {
+                "types": "./js/index.d.ts",
+                "style": "./css/index.css",
+                "import": "./js/index.js",
+                "require": "./js/index.cjs"
+            }
+        },
+        "directory": "dist",
+        "linkDirectory": false,
+        "access": "public"
+    },
+    "scripts": {
+        "build": "cross-env NODE_ENV=production INPUT_DIR=src/ OUTPUT_DIR=dist/ pnpm run build:package",
+        "build:package": "pnpm run build:prebuild && tsup && pnpm run build:postbuild",
+        "build:prebuild": "node ./scripts/prebuild.mjs",
+        "build:postbuild": "node ./scripts/postbuild.mjs",
+        "dev:link": "pnpm link --global && npm link"
+    },
+    "peerDependencies": {
+        "tailwindcss": ">=3.1.0"
+    }
+}

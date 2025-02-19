@@ -4,7 +4,21 @@
     "trailingComma": "none",
     "semi": true,
     "singleQuote": true,
-    "vueIndentScriptAndStyle": false,
     "printWidth": 250,
-    "bracketSameLine": false
+    "bracketSameLine": false,
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": ["*.ts", "*.mts", "*.d.ts"],
+            "options": {
+                "parser": "typescript"
+            }
+        },
+        {
+            "files": ["*.json"],
+            "options": {
+                "parser": "json"
+            }
+        }
+    ]
 }
