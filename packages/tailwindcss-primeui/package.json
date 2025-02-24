@@ -1,6 +1,6 @@
 {
     "name": "tailwindcss-primeui",
-    "version": "0.5.0-beta.1",
+    "version": "0.5.0-beta.2",
     "author": "PrimeTek Informatics",
     "description": "Utilities for Tailwind CSS",
     "license": "MIT",
@@ -18,30 +18,30 @@
         "tailwind",
         "plugin"
     ],
-    "main": "./src/js/index.ts",
-    "module": "./src/js/index.ts",
-    "style": "./src/css/index.css",
-    "types": "./src/js/index.ts",
+    "main": "./src/v3/index.ts",
+    "module": "./src/v3/index.ts",
+    "style": "./src/v4/index.css",
+    "types": "./src/v3/index.ts",
     "exports": {
         ".": {
-            "types": "./src/js/index.ts",
-            "style": "./src/css/index.css",
-            "import": "./src/js/index.ts",
-            "require": "./src/js/index.ts"
+            "types": "./src/v3/index.ts",
+            "style": "./src/v4/index.css",
+            "import": "./src/v3/index.ts",
+            "require": "./src/v3/index.ts"
         }
     },
     "publishConfig": {
-        "main": "./js/index.js",
-        "module": "./js/index.js",
-        "unpkg": "./js/index.global.js",
-        "style": "./css/index.css",
-        "types": "./js/index.d.ts",
+        "main": "./v3/index.js",
+        "module": "./v3/index.js",
+        "unpkg": "./v3/index.global.js",
+        "style": "./v4/index.css",
+        "types": "./v3/index.d.ts",
         "exports": {
             ".": {
-                "types": "./js/index.d.ts",
-                "style": "./css/index.css",
-                "import": "./js/index.js",
-                "require": "./js/index.cjs"
+                "types": "./v3/index.d.ts",
+                "style": "./v4/index.css",
+                "import": "./v3/index.js",
+                "require": "./v3/index.cjs"
             }
         },
         "directory": "dist",
