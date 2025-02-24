@@ -1,6 +1,6 @@
 {
     "name": "tailwindcss-primeui",
-    "version": "0.5.0-beta.2",
+    "version": "0.5.0-beta.3",
     "author": "PrimeTek Informatics",
     "description": "Utilities for Tailwind CSS",
     "license": "MIT",
@@ -20,7 +20,6 @@
     ],
     "main": "./src/v3/index.ts",
     "module": "./src/v3/index.ts",
-    "style": "./src/v4/index.css",
     "types": "./src/v3/index.ts",
     "exports": {
         ".": {
@@ -34,7 +33,6 @@
         "main": "./v3/index.js",
         "module": "./v3/index.js",
         "unpkg": "./v3/index.global.js",
-        "style": "./v4/index.css",
         "types": "./v3/index.d.ts",
         "exports": {
             ".": {
