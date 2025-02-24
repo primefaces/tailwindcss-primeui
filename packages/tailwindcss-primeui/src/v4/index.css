@@ -1,6 +1,4 @@
 @import "./theme/colors.css";
-@import "./theme/keyframes.css";
-
 @import "./utils/backface.css";
 @import "./utils/delay.css";
 @import "./utils/direction.css";
@@ -12,7 +10,4 @@
 @import "./utils/preset.css";
 @import "./utils/enterleave.css";
 @import "./utils/animation.css";
-
-/* Dark mode configuration */
-@custom-variant dark (&:where(.p-dark, .p-dark *));
-/* Theme configuration */
+@import "./utils/keyframes.css";

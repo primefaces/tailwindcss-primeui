@@ -1,0 +1,3 @@
+@utility animate-duration-* { 
+    animation-duration: --value(integer)ms; 
+} 

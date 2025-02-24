@@ -1,3 +1,7 @@
+@utility border-surface {
+  border-color: var(--p-content-border-color);
+}
+
 @utility bg-emphasis {
   background: var(--p-content-hover-background);
   color: var(--p-content-hover-color);
