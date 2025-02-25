@@ -12,6 +12,14 @@ export default defineConfig([
         minify: true,
         sourcemap: true,
         splitting: false,
-        clean: true
+        clean: true,
+        esbuildOptions(options, context) {
+            if (context.format === 'cjs') {
+                options.footer = {
+                    // https://github.com/egoist/tsup/issues/710
+                    js: `module.exports = module.exports.default || module.exports;`
+                };
+            }
+        }
     }
 ]);
