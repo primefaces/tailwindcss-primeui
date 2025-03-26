@@ -79,3 +79,6 @@
 @custom-variant p-sorted (&[data-p~="sorted"],&[data-p-sorted="true"]);
 @custom-variant p-resizable (&[data-p~="resizable"],&[data-p-resizable-column="true"],&[data-p-resizable="true"]);
 @custom-variant p-hoverable (&[data-p~="hoverable"]);
+@custom-variant p-scrollable (&[data-p~="scrollable"],&[data-p-scrollable="true"]);
+@custom-variant p-flex-scrollable (&[data-p~="flex-scrollable"],&[data-p-flex-scrollable="true"]);
+@custom-variant p-frozen (&[data-p~="frozen"],&[data-p-frozen="true"],&[data-p-frozen-column="true"]);
